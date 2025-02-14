@@ -1,0 +1,33 @@
+@media (min-width: 1024px) {
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.footer__logo__image {
+  min-width: 150px;
+  height: auto;
+}
+
+.small-links {
+  @apply text-sm leading-[1.5];
+}
+
+.small-links:hover {
+  @apply text-red;
+}
+
+.headline {
+  @apply text-lg uppercase font-extrabold;
+}
+
+.gap5 {
+  @apply flex flex-col gap-[5px];
+}
+
+.icon-media {
+  @apply fill-white hover:fill-red;
+}

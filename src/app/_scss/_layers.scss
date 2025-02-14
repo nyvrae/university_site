@@ -1,0 +1,76 @@
+@layer components {
+  .wrapper--mt {
+    @apply mt-[75px] lg:mt-[100px];
+  }
+  .wrapper--my {
+    @apply my-[75px] lg:my-[100px];
+  }
+
+  .wrapper,
+  .wrapper--mt,
+  .wrapper--my {
+    width: 100%;
+    padding-left: clamp(15px, 5svw, 40px);
+    padding-right: clamp(15px, 5svw, 40px);
+    @apply max-w-[1920px];
+  }
+
+  @screen md {
+    .wrapper,
+    .wrapper--mt,
+    .wrapper--my {
+      padding-left: clamp(50px, 6.5svw, 80px);
+      padding-right: clamp(50px, 6.5svw, 80px);
+    }
+  }
+
+  @screen lg {
+    .wrapper,
+    .wrapper--mt,
+    .wrapper--my {
+      padding-left: clamp(20px, 7.8svw, 150px);
+      padding-right: clamp(20px, 7.8svw, 150px);
+    }
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@layer utilities {
+  .wwtitle--bold,
+  .wwtitle {
+    @apply text-[1.25rem] lg:text-[1.5rem] font-semibold leading-[1.2];
+  }
+
+  .wwtitle--bold {
+    @apply uppercase;
+  }
+
+  .wwtext {
+    @apply text-base leading-[1.5];
+  }
+}
+
+@layer utilities {
+  .big-number {
+    font-size: clamp(
+      36px,
+      calc(12px + (90 - 12) * ((100vw - 320px) / (1920 - 320))),
+      90px
+    );
+  }
+
+  .postfixForStats {
+    font-size: clamp(
+      16px,
+      calc((16px + (90 - 16) * ((100vw - 320px) / (1920 - 320))) / 4),
+      30px
+    );
+  }
+}
