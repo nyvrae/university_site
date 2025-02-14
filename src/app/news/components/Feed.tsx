@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import FeedCard from './FeedCard'
 
@@ -90,38 +90,40 @@ const Feed = () => {
     if (newsList.length === 0) return <div>Новости не найдены</div>
 
     return (
-        <section id="section-news" className="news-feed">
-            <div className="news-feed__wrapper wrapper--my">
-                <h2 className="flex items-center uppercase font-semibold">
-                    <span className="wwtitle--bold">Лента новостей</span>
-                    <span className="upper-arrow">
-                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 22.5L6.25 20.75L18.25 8.75H7.5V6.25H22.5V21.25H20V10.5L8 22.5Z"
-                                className="fill-black fill-opacity-1;" />
-                        </svg>
-                    </span>
-                </h2>
+        <Suspense fallback={<div>Загрузка...</div>}>
+            <section id="section-news" className="news-feed">
+                <div className="news-feed__wrapper wrapper--my">
+                    <h2 className="flex items-center uppercase font-semibold">
+                        <span className="wwtitle--bold">Лента новостей</span>
+                        <span className="upper-arrow">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 22.5L6.25 20.75L18.25 8.75H7.5V6.25H22.5V21.25H20V10.5L8 22.5Z"
+                                    className="fill-black fill-opacity-1;" />
+                            </svg>
+                        </span>
+                    </h2>
 
-                <div className="news-feed__block-news grid grid-cols-1 lg:grid-cols-2 gap-x-[75px] mt-[25px] gap-y-[80px]">
-                    {newsList.slice(startIndex, endIndex).map((news) => (
-                        <FeedCard key={news.id} news={news} />
-                    ))}
-                </div>
+                    <div className="news-feed__block-news grid grid-cols-1 lg:grid-cols-2 gap-x-[75px] mt-[25px] gap-y-[80px]">
+                        {newsList.slice(startIndex, endIndex).map((news) => (
+                            <FeedCard key={news.id} news={news} />
+                        ))}
+                    </div>
 
-                <div className="pagination flex justify-between items-center mt-[60px]">
-                    <PaginationButton
-                        direction="prev"
-                        disabled={currentPage <= 1}
-                        onClick={currentPage > 1 ? () => handlePageChange(currentPage - 1) : undefined}
-                    />
-                    <PaginationButton
-                        direction="next"
-                        disabled={endIndex >= newsList.length}
-                        onClick={endIndex < newsList.length ? () => handlePageChange(currentPage + 1) : undefined}
-                    />
+                    <div className="pagination flex justify-between items-center mt-[60px]">
+                        <PaginationButton
+                            direction="prev"
+                            disabled={currentPage <= 1}
+                            onClick={currentPage > 1 ? () => handlePageChange(currentPage - 1) : undefined}
+                        />
+                        <PaginationButton
+                            direction="next"
+                            disabled={endIndex >= newsList.length}
+                            onClick={endIndex < newsList.length ? () => handlePageChange(currentPage + 1) : undefined}
+                        />
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </Suspense>
     )
 }
 
