@@ -26,21 +26,21 @@ const Advantages = () => {
                             return (
                                 <div
                                     key={index}
-                                    className="slider__item bg-white text-blue px-[40px] rounded-lg cursor-pointer flex items-center gap-8 transition-all duration-300 hover:bg-opacity-90 hover:scale-105"
+                                    className="slider__item bg-white text-blue px-[40px] rounded-lg cursor-pointer flex items-center gap-8 transition-all duration-300 hover:bg-opacity-90"
                                     onClick={() => {
                                         const items = document.querySelectorAll('.slider__item');
                                         const currentText = items[index].querySelector('.slider__text');
 
                                         if (!currentText?.classList.contains('hidden')) {
                                             currentText?.classList.add('hidden');
-                                            items[index].classList.remove('scale-110', 'shadow-lg');
+                                            items[index].classList.remove('shadow-lg');
                                         } else {
                                             items.forEach(item => {
                                                 item.querySelector('.slider__text')?.classList.add('hidden');
-                                                item.classList.remove('scale-110', 'shadow-lg');
+                                                item.classList.remove('shadow-lg');
                                             });
                                             currentText?.classList.remove('hidden');
-                                            items[index].classList.add('scale-110', 'shadow-lg');
+                                            items[index].classList.add('shadow-lg');
                                         }
                                     }}
                                 >
