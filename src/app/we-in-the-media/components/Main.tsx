@@ -15,13 +15,13 @@ const Main = () => {
                         {
                             mediaData.map((item, index) => {
                                 return (
-                                    <div key={index} className="we-in-the-media__item flex max-md:flex-col max-md:gap-[10px] items-center gap-[30px]">
+                                    <div key={index} className="we-in-the-media__item flex md:items-center max-md:flex-col max-md:gap-[10px] gap-[30px]">
                                         <div className="bg-blue min-w-[200px] w-[200px] h-[75px] rounded-full block text-white flex-center">
                                             <p className="text-sm">
                                                 {item.mediaName}
                                             </p>
                                         </div>
-                                        <div className="wwtext hover:text-red max-md:text-center">
+                                        <div className="wwtext hover:text-red max-md:text-left">
                                             <Link href={item.link}>
                                                 {item.theme}
                                             </Link>
