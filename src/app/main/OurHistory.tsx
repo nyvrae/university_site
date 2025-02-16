@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { historyText, historyDates } from '@/data/us-and-dalian/histrory'
+import { historyText, historyDates } from '@/data/main/history';
 import students from '../../../public/pics/students.jpg'
 
 const OurHistory = () => {

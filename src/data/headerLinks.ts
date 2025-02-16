@@ -24,6 +24,10 @@ export const headerLinks: HeaderLink[] = [
         subname: 'Нормативные документы',
         subhref: '/docs',
       },
+      {
+        subname: 'Мы в СМИ',
+        subhref: '/we-in-the-media',
+      },
     ],
   },
 

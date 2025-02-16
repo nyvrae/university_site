@@ -90,7 +90,7 @@ const FeedX = () => {
     if (newsList.length === 0) return <div>Новости не найдены</div>
 
     return (
-        <section id="section-news" className="news-feed">
+        <section id="section-news" className="news-feed flex-center">
             <div className="news-feed__wrapper wrapper--my">
                 <h2 className="flex items-center uppercase font-semibold">
                     <span className="wwtitle--bold">Лента новостей</span>
