@@ -69,6 +69,16 @@ export const headerLinks: HeaderLink[] = [
         subname: 'Общежитие',
         subhref: '/dorm',
       },
+      {
+        subname: 'Наука ↗',
+        subhref: 'https://conf.bsu.by/',
+        blank: true,
+      },
+      {
+        subname: 'Академические обмены ↗',
+        subhref: 'https://ums.bsu.by/ru/mezhvuzovskoe-sotrudnichestvo',
+        blank: true,
+      },
     ],
   },
 ];

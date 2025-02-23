@@ -3,6 +3,8 @@ import { filingSteps } from "@/data/filing-of-documents/filingData";
 import StepsList from "./StepsList";
 import { filingHeadlines } from "@/data/filing-of-documents/filingData";
 
+import Link from "next/link";
+
 const Main = () => {
     return (
         <section className="filing-of-documents flex-center">
@@ -24,9 +26,9 @@ const Main = () => {
                 </article>
 
                 <div className="mt-[50px] lg:mt-[60px]">
-                    <a href={filingSteps.additionalInfo.link} className="underline underline-offset-4 text-blue font-semibold hover:text-red">
+                    <Link href={filingSteps.additionalInfo.link} className="underline underline-offset-4 text-blue font-semibold hover:text-red" target="_blank" rel='noopener noreferrer'>
                         {filingSteps.additionalInfo.text}
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import NewsData from '@/data/news/newsData';
 
 export async function GET() {
-    const newsList = NewsData.map((item, index) => ({
+    const newsList = NewsData.reverse().map((item, index) => ({
         id: index + 1,
         date: item.date,
         title: item.title,

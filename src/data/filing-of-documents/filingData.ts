@@ -1,7 +1,7 @@
 export const filingSteps = {
   withCabinet: {
     steps: [
-      'Создание личного кабинета по ссылке: <a href="https://abit.bsu.by" className="underline underline-offset-4 hover:text-red-200">https://abit.bsu.by ⤴</a>',
+      'Создание личного кабинета по ссылке: <Link href="https://abit.bsu.by" className="underline underline-offset-4 hover:text-red-200">https://abit.bsu.by ⤴</Link>',
       'Заполнение заявления и анкеты в личном кабинете абитуриента.',
       'Размещение цифровой фотографии в личном кабинете.',
       'Печать заявления и анкеты (дома или в БГУ).',

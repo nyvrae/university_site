@@ -22,7 +22,7 @@ const Main = () => {
                                             </p>
                                         </div>
                                         <div className="wwtext hover:text-red max-md:text-left">
-                                            <Link href={item.link}>
+                                            <Link href={item.link} target='_blank' rel='noopener noreferrer'>
                                                 {item.theme}
                                             </Link>
                                         </div>

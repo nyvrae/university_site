@@ -35,6 +35,10 @@ export const footerLinks: FooterLink = {
         name: 'Электронная библиотека',
         href: 'https://elib.bsu.by/',
       },
+      {
+        name: 'Министерство образования',
+        href: 'https://edu.gov.by/',
+      }
     ],
   },
 

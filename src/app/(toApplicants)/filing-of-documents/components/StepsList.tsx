@@ -1,5 +1,7 @@
 import React from "react";
 
+import Link from "next/link";
+
 interface StepsListProps {
     steps: string[];
 }
@@ -12,12 +14,14 @@ const StepsList: React.FC<StepsListProps> = ({ steps }) => {
                     return (
                         <li key={index}>
                             <strong>{index + 1}.</strong> Создание личного кабинета по ссылке:{" "}
-                            <a
+                            <Link
                                 href="https://abit.bsu.by"
                                 className="underline underline-offset-4 hover:text-red"
+                                target="_blank"
+                                rel='noopener noreferrer'
                             >
                                 https://abit.bsu.by ⤴
-                            </a>
+                            </Link>
                         </li>
                     );
                 }

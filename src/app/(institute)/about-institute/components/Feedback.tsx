@@ -12,6 +12,7 @@ import {
 
 import feofanStudent from '@/../public/people/feofan_student.png';
 import nadezhdaStudent from '@/../public/people/nadezhda_student.png';
+import Link from 'next/link';
 
 const Feedback = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -57,20 +58,20 @@ const Feedback = () => {
                     </div>
                 </div>
                 <div className="flex justify-center gap-4 mt-8 text-blue">
-                    <a
+                    <Link
                         href="#feedback"
                         onClick={feofanSlide}
                         className="hover:text-red rounded"
                     >
                         Феофан
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="#feedback"
                         onClick={nadezhdaSlide}
                         className="hover:text-red rounded"
                     >
                         Надежда
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

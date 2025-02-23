@@ -17,7 +17,7 @@ const NewsSection = () => {
                     </div>
 
                     <div className="news__list flex flex-col justify-center">
-                        {MainNews.map((news, index) => (
+                        {MainNews.reverse().map((news, index) => (
                             <div key={index}>
                                 <div className="flex justify-between items-center text-left gap-[30px]">
 

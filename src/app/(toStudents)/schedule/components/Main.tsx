@@ -38,7 +38,7 @@ const ScheduleContent = () => {
 
                 <div className="document flex items-center gap-[10px] mt-[20px]">
                     <Image src={Clip} height={32} alt='#' />
-                    <Link href={'https://bdji.bsu.by/files/prilozhenie_1.pdf'} className="underline underline-offset-4 hover:text-red">{scheduleText.application}</Link>
+                    <Link href={'https://bdji.bsu.by/files/prilozhenie_1.pdf'} className="underline underline-offset-4 hover:text-red" target="_blank" rel='noopener noreferrer'>{scheduleText.application}</Link>
                 </div>
 
                 <div className="graph-dormitory mt-[75px] lg:mt-[100px]">

@@ -13,7 +13,7 @@ const Docs = () => {
                     {documents.map((doc, index) => (
                         <li key={index} className="flex items-center gap-[15px] docs__item">
                             <Image src={PdfFile} alt="" />
-                            <Link href={doc.href} className="hover:text-red" download>{doc.title}</Link>
+                            <Link href={doc.href} className="hover:text-red" target='_blank' rel='noopener noreferrer' download>{doc.title}</Link>
                         </li>
                     ))}
                 </ul>

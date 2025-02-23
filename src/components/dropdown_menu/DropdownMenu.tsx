@@ -21,7 +21,11 @@ const DropdownMenu: React.FC<MenuProps> = ({ children, submenuItems }) => {
                     <ul className='flex flex-col gap-2'>
                         {submenuItems.map((submenuItem: any, idx: number) => (
                             <li key={idx}>
-                                <Link href={submenuItem.subhref} className="block px-4 w-full h-full hover:underline underline-offset-4">
+                                <Link
+                                    href={submenuItem.subhref}
+                                    className="block px-4 w-full h-full hover:underline underline-offset-4"
+                                    target={submenuItem.blank ? "_blank" : undefined}
+                                    rel={submenuItem.blank ? "noopener noreferrer" : undefined}>
                                     {submenuItem.subname}
                                 </Link>
                             </li>
