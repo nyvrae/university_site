@@ -1,4 +1,4 @@
-import { specialtiesData, specialtiesContent } from "@/data/specialities";
+import { specialtiesData, specialtiesContent, openDaysInfo } from "@/data/specialities";
 import Image from "next/image";
 
 import { Specialty } from "@/types/specialty";
@@ -38,6 +38,12 @@ const Main = () => {
                         </div>
                     </div>
                 ))}
+
+                <div className="about-open-days mt-[50px]">
+                    <p className="italic wwtext">
+                        {openDaysInfo.info}
+                    </p>
+                </div>
             </div>
         </section>
     );
