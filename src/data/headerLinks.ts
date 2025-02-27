@@ -28,6 +28,11 @@ export const headerLinks: HeaderLink[] = [
         subname: 'Мы в СМИ',
         subhref: '/we-in-the-media',
       },
+      {
+        subname: 'Идеологическая и воспит. работа↗',
+        subhref: 'https://bsu.by/studentam/edinyy-den-informirovaniya.php',
+        blank: true,
+      },
     ],
   },
 
@@ -78,6 +83,16 @@ export const headerLinks: HeaderLink[] = [
         subname: 'Академические обмены ↗',
         subhref: 'https://ums.bsu.by/ru/mezhvuzovskoe-sotrudnichestvo',
         blank: true,
+      },
+      {
+        subname: 'Студенческие организации ↗',
+        subhref:
+          'https://bsu.by/studentam/vneuchebnaya-deyatelnost/studencheskie-organizatsii/',
+        blank: true,
+      },
+      {
+        subname: 'Летние и зимние школы',
+        subhref: '/summer-and-winter-schools',
       },
     ],
   },

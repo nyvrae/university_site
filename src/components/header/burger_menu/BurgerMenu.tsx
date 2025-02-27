@@ -35,7 +35,7 @@ const BurgerMenu = () => {
         <div className="md:hidden flex h-inherit items-center z-50">
             <button
                 onClick={toggleMenu}
-                className="relative w-8 h-8 flex flex-col items-center justify-center gap-2 z-50"
+                className={`relative w-8 h-8 flex flex-col items-center justify-center gap-2 z-50`}
                 aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
                 title={isOpen ? "Закрыть меню" : "Открыть меню"}
             >
@@ -45,7 +45,7 @@ const BurgerMenu = () => {
             </button>
 
             {isOpen && (
-                <div className="fixed w-full min-h-full left-0 top-0 bg-blue overflow-y-auto">
+                <div className="fixed w-full min-h-full h-screen left-0 top-0 bg-blue overflow-y-auto">
                     <nav className="w-full pt-[50px] pl-[50px] pb-[50px] text-white">
                         <ul className="flex flex-col gap-8">
                             {headerLinks.map((item, index) => (

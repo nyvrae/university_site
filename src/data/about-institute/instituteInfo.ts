@@ -37,3 +37,7 @@ export const infoContent = [
     конференциях. Это обогащает их образовательный опыт и расширяет горизонты.`,
   },
 ];
+
+export const presentationTitle = {
+  title: 'Презентация о нашем институте↗',
+};

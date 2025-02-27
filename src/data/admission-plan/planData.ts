@@ -2,7 +2,7 @@ import mmfLogo from '@/../public/logos/mmfLogo.svg';
 import physLogo from '@/../public/logos/physLogo.svg';
 import fmoLogo from '@/../public/logos/fmoLogo.svg';
 
-const dataSourcePhyzMath = [
+const dataSourcePhyz = [
   {
     key: '1',
     title: 'План приема',
@@ -22,6 +22,29 @@ const dataSourcePhyzMath = [
     paid2023: '254',
     budget2024: '343',
     paid2024: '287',
+  },
+];
+
+const dataSourceMath = [
+  {
+    key: '1',
+    title: 'План приема',
+    budget2022: '20',
+    paid2022: '5',
+    budget2023: '20',
+    paid2023: '5',
+    budget2024: '20',
+    paid2024: '5',
+  },
+  {
+    key: '2',
+    title: 'Проходные баллы',
+    budget2022: '296',
+    paid2022: '263',
+    budget2023: '347',
+    paid2023: '285',
+    budget2024: '356',
+    paid2024: '295',
   },
 ];
 
@@ -112,13 +135,13 @@ export const specialities = [
     id: 'phys',
     name: 'Прикладная физика',
     logo: physLogo,
-    data: dataSourcePhyzMath,
+    data: dataSourcePhyz,
   },
   {
     id: 'math',
     name: 'Механика и математическое моделирование',
     logo: mmfLogo,
-    data: dataSourcePhyzMath,
+    data: dataSourceMath,
   },
   {
     id: 'economy',
