@@ -9,7 +9,7 @@ RUN npm install -g pnpm
 
 # Копирование только файлов зависимостей
 COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile --prod
+RUN pnpm install --no-frozen-lockfile
 
 # Сборка приложения
 FROM base AS builder
