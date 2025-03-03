@@ -15,9 +15,14 @@ services:
       - .env
     networks:
       - app-network
+    deploy:
+      resources:
+        limits:
+          memory: 1G
 
   nginx:
     image: nginx:alpine
+    restart: always
     ports:
       - '80:80'
     volumes:
@@ -26,10 +31,10 @@ services:
       - app
     networks:
       - app-network
-
-volumes:
-  nginx_logs:
-
+    deploy:
+      resources:
+        limits:
+          memory: 256M
 
 networks:
   app-network:

@@ -22,7 +22,18 @@ DOMAIN=learning-wildcat-becoming.ngrok-free.app
 EOL
 fi
 
-# Запуск Docker контейнеров
+# Проверка свободного места
+echo "Проверка свободного места на диске..."
+df -h /
+
+# Очистка Docker для освобождения места
+echo "Очистка Docker для освобождения места..."
+docker system prune -a -f
+
+# Запуск Docker контейнеров с пересборкой
+echo "Запуск Docker контейнеров..."
+docker-compose down
+docker-compose build --no-cache
 docker-compose up -d
 
 # Настройка Ngrok
