@@ -4,8 +4,8 @@
 sudo apt update
 sudo apt install -y docker.io docker-compose certbot python3-certbot-nginx
 
-# Создание SSL сертификата
-sudo certbot certonly --nginx -d bdji.bsu.by --non-interactive --agree-tos --email cers29fot@gmail.com
+# # Создание SSL сертификата
+# sudo certbot certonly --nginx -d bdji.bsu.by --non-interactive --agree-tos --email cers29fot@gmail.com
 
 # Проверка свободного места
 echo "Проверка свободного места на диске..."
