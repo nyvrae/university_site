@@ -1,71 +1,35 @@
 #!/bin/bash
 
-# Установка Docker и Docker Compose
+# Установка необходимых пакетов
 sudo apt update
-sudo apt install -y docker.io docker-compose
+sudo apt install -y docker.io docker-compose certbot python3-certbot-nginx
 
-# Установка Ngrok
-curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null
-echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list
-sudo apt update
-sudo apt install -y ngrok
-
-# Создаем .env файл, если его нет
-if [ ! -f .env ]; then
-  echo "Создаем .env файл..."
-  cat > .env << EOL
-NEXT_PUBLIC_API_URL=https://learning-wildcat-becoming.ngrok-free.app
-NODE_ENV=production
-LOCAL_IP_VM=192.168.1.100
-PUBLIC_IP_VM=79.170.109.29
-DOMAIN=learning-wildcat-becoming.ngrok-free.app
-EOL
-fi
+# Создание SSL сертификата
+sudo certbot certonly --nginx -d bdji.bsu.by --non-interactive --agree-tos --email cers29fot@gmail.com
 
 # Проверка свободного места
 echo "Проверка свободного места на диске..."
 df -h /
 
-# Очистка системы для освобождения места
-echo "Очистка системы для освобождения места..."
+# Очистка системы
+echo "Очистка системы..."
 sudo apt clean
 sudo apt autoremove -y
 sudo rm -rf /tmp/*
 sudo journalctl --vacuum-time=1d
 
-# Очистка Docker для освобождения места
-echo "Очистка Docker для освобождения места..."
-docker system prune -a -f
+# Очистка Docker
+echo "Очистка Docker..."
+docker system prune -f
 
-# Запуск Docker контейнеров с пересборкой
-echo "Запуск Docker контейнеров..."
+# Запуск контейнеров
+echo "Запуск контейнеров..."
 docker-compose down
 docker-compose build --no-cache
 docker-compose up -d
 
-# Настройка Ngrok
-ngrok config add-authtoken 2thhTZxrC1PtOk3GTT6Pb4EmK9W_47FGQ4wYRuGnskjeWDQ26
+# Проверка статуса
+echo "Проверка статуса..."
+docker-compose ps
 
-# Проверяем, запущен ли уже ngrok
-if pgrep -f "ngrok" > /dev/null; then
-  echo "Ngrok уже запущен, перезапускаем..."
-  pkill -f ngrok
-fi
-
-# Запуск Ngrok с использованием статического домена
-nohup ngrok http --domain=learning-wildcat-becoming.ngrok-free.app 80 > ngrok.log 2>&1 &
-
-# Ожидание запуска Ngrok
-echo "Ожидаем запуска Ngrok..."
-sleep 5
-
-# Проверка статуса Ngrok
-if curl -s localhost:4040/api/tunnels > /dev/null; then
-  NGROK_URL=$(curl -s localhost:4040/api/tunnels | grep -o '"public_url":"[^"]*' | grep -o 'https://[^"]*')
-  echo "Ngrok успешно запущен: $NGROK_URL"
-else
-  echo "Предупреждение: Ngrok API недоступен. Проверьте логи: cat ngrok.log"
-fi
-
-echo "Деплой завершен. Сайт доступен по адресу: https://learning-wildcat-becoming.ngrok-free.app"
-echo "Для просмотра логов Ngrok: cat ngrok.log" 
+echo "Деплой завершен. Сайт доступен по адресу: https://bdji.bsu.by" 
