@@ -17,7 +17,7 @@ const FeedCard = ({ news }: NewsCardProps) => {
             <Link href={`/news/${news.id}`} className='flex flex-col gap-[15px] border-[2px] rounded-lg overflow-hidden 
                 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-blue'>
                 <Image
-                    className='news-item__image lg:w-full object-cover h-[500px] transition-transform duration-300 hover:scale-105'
+                    className='news-item__image w-full object-cover h-[500px] transition-transform duration-300 hover:scale-105'
                     src={news.image}
                     width={400}
                     height={400}

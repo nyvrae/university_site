@@ -26,4 +26,4 @@ const MainNews: MainPageNewsType[] = [
   },
 ];
 
-export default MainNews;
+export default MainNews.reverse();

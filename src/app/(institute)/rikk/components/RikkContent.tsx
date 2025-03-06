@@ -22,7 +22,7 @@ const RikkContent = () => {
                 </ul>
 
                 <div className="mt-[50px] lg:mt-[75px]">
-                    <Image src={RikkImage} alt='' />
+                    <Image src={RikkImage} alt='Фото главного корпуса РИКК' />
                 </div>
 
                 <div className="mt-[35px]">

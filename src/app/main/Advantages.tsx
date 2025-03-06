@@ -7,7 +7,7 @@ const Advantages = () => {
         <section className="advantages flex-center bg-blue bg-[url('/pics/nice_background.png')] bg-cover bg-center">
             <div className="advantages__wrapper wrapper py-[75px] lg:py-[100px]">
                 <h2 className="flex flex-col text-right text-white">
-                    <span className="text-red text-[56px]">教育過程</span>
+                    <span className="text-red text-[56px]">教育过程</span>
                     <span className="wwtitle--bold mr-[10px]">учебный процесс</span>
                 </h2>
 

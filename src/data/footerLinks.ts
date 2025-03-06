@@ -38,23 +38,17 @@ export const footerLinks: FooterLink = {
       {
         name: 'Министерство образования',
         href: 'https://edu.gov.by/',
-      }
+      },
+      {
+        name: 'Политика Cookies',
+        href: 'https://abiturient.bsu.by/cookie-info/',
+      },
     ],
   },
 
   tCol: {
     headline: 'Контакты',
     p: '+375 (17) 209-53-73',
-    // icons: [
-    //   {
-    //     icon: 'telegram-icon',
-    //     href: '',
-    //   },
-    //   {
-    //     icon: 'instagram-icon',
-    //     href: '',
-    //   },
-    // ],
     // allLinks: [
     //     {
     //         name: 'Как добраться',
