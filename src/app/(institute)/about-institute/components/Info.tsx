@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { infoContent, presentationTitle } from '@/data/about-institute/instituteInfo';
+import { infoContent } from '@/data/about-institute/instituteInfo';
 
 const Info = () => {
     return (
@@ -13,7 +13,6 @@ const Info = () => {
                         <hr className="w-[150px]" />
                     </div>
                 ))}
-                <Link href="/files/Совместный институт БГУ и ДПУ.pdf" className="uppercase underline underline-offset-4 font-bold hover:text-red" download>{presentationTitle.title}</Link>
             </div>
         </section >
     );

@@ -1,5 +1,6 @@
-import { specialtiesData, specialtiesContent, openDaysInfo } from "@/data/specialities";
+import { specialtiesData, specialtiesContent, openDaysInfo, presentationTitle } from "@/data/specialities";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Specialty } from "@/types/specialty";
 
@@ -13,6 +14,8 @@ const Main = () => {
                         {specialtiesContent.description}
                     </p>
                 </div>
+
+                <Link href="/files/Совместный институт БГУ и ДПУ.pdf" className="uppercase underline underline-offset-4 font-bold hover:text-red" download>{presentationTitle.title}</Link>
 
                 {specialtiesData.map((specialty: Specialty, index: number) => (
                     <div key={specialty.title}>
