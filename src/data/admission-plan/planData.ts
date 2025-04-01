@@ -12,6 +12,8 @@ const dataSourcePhyz = [
     paid2023: '5',
     budget2024: '20',
     paid2024: '5',
+    budget2025: '20',
+    paid2025: '5',
   },
   {
     key: '2',
@@ -35,6 +37,8 @@ const dataSourceMath = [
     paid2023: '5',
     budget2024: '20',
     paid2024: '5',
+    budget2025: '20',
+    paid2025: '5',
   },
   {
     key: '2',
@@ -58,6 +62,8 @@ const dataSource = [
     paid2023: '20',
     budget2024: '-',
     paid2024: '20',
+    budget2025: '-',
+    paid2025: '20',
   },
   {
     key: '2',
@@ -124,6 +130,23 @@ export const columns = [
         title: 'Платная',
         dataIndex: 'paid2024',
         key: 'paid2024',
+        align: 'center',
+      },
+    ],
+  },
+  {
+    title: '2025',
+    children: [
+      {
+        title: 'Бюджет',
+        dataIndex: 'budget2025',
+        key: 'budget2025',
+        align: 'center',
+      },
+      {
+        title: 'Платная',
+        dataIndex: 'paid2025',
+        key: 'paid2025',
         align: 'center',
       },
     ],

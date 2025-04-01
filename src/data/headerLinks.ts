@@ -30,7 +30,7 @@ export const headerLinks: HeaderLink[] = [
       },
       {
         subname: 'Идеологическая и воспит. работа↗',
-        subhref: 'https://bsu.by/studentam/edinyy-den-informirovaniya.php',
+        subhref: 'https://minsk.gov.by/ru/actual/view/209/2025.shtml',
         blank: true,
       },
     ],
