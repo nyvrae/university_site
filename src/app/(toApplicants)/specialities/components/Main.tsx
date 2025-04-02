@@ -15,7 +15,7 @@ const Main = () => {
                     </p>
                 </div>
 
-                <Link href="/files/Совместный институт БГУ и ДПУ.pptx" className="uppercase underline underline-offset-4 font-bold hover:text-red" download>{presentationTitle.title}</Link>
+                <Link href="/files/Совместный институт.pdf" className="uppercase underline underline-offset-4 font-bold hover:text-red" download>{presentationTitle.title}</Link>
 
                 {specialtiesData.map((specialty: Specialty, index: number) => (
                     <div key={specialty.title}>
