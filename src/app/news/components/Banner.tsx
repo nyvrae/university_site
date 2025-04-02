@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import BannerImage from '../../../../public/news-photos/1.png'
+import BannerImage from '../../../../public/news-photos/banner.png'
 
 import { BannerInfo } from '@/data/news/bannerInfo';
 
@@ -28,7 +28,7 @@ const Banner = () => {
                             <p>
                                 {BannerInfo.description}
                             </p>
-                            <Link href="/news/1" className="underline underline-offset-4 hover:text-blue">
+                            <Link href="/news/8" className="underline underline-offset-4 hover:text-blue">
                                 {BannerInfo.forLink}
                             </Link>
                         </div>

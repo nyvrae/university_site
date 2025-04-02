@@ -35,43 +35,46 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
 
                     <div className="flex flex-col gap-8">
                         <div className="relative">
-                            {Array.isArray(newsItem.image) ? (
-                                <Swiper
-                                    modules={[Autoplay, Pagination]}
-                                    pagination={{
-                                        clickable: true,
-                                    }}
-                                    autoplay={{
-                                        delay: 5000,
-                                        disableOnInteraction: false,
-                                    }}
+                            {
+                                newsItem.image && (
+                                    Array.isArray(newsItem.image) ? (
+                                        <Swiper
+                                            modules={[Autoplay, Pagination]}
+                                            pagination={{
+                                                clickable: true,
+                                            }}
+                                            autoplay={{
+                                                delay: 5000,
+                                                disableOnInteraction: false,
+                                            }}
 
 
-                                    className="aspect-video max-h-[600px]"
-                                >
-                                    {newsItem.image.map((img, index) => (
-                                        <SwiperSlide key={index}>
-                                            <div className="relative aspect-video">
-                                                <Image
-                                                    src={`/news-photos/${img}`}
-                                                    alt={`${newsItem.title} - изображение ${index + 1}`}
-                                                    fill
-                                                    className="object-cover"
-                                                />
-                                            </div>
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
-                            ) : (
-                                <div className="relative aspect-video">
-                                    <Image
-                                        src={`/news-photos/${newsItem.image}`}
-                                        alt={newsItem.title}
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
-                            )}
+                                            className="aspect-video max-h-[600px]"
+                                        >
+                                            {newsItem.image.map((img, index) => (
+                                                <SwiperSlide key={index}>
+                                                    <div className="relative aspect-video">
+                                                        <Image
+                                                            src={`/news-photos/${img}`}
+                                                            alt={`${newsItem.title} - изображение ${index + 1}`}
+                                                            fill
+                                                            className="object-cover"
+                                                        />
+                                                    </div>
+                                                </SwiperSlide>
+                                            ))}
+                                        </Swiper>
+                                    ) : (
+                                        <div className="relative aspect-video">
+                                            <Image
+                                                src={`/news-photos/${newsItem.image}`}
+                                                alt={newsItem.title}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                    )
+                                )}
                         </div>
 
                         <div className="space-y-4">
