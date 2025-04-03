@@ -1,6 +1,6 @@
 import { NewsDataProps } from '@/types/newsProps';
 
-const NewsData: NewsDataProps[] = [
+const NewsDataList: NewsDataProps[] = [
   {
     id: 1,
     title: `26 ноября, в БГУ стартовала ежегодная китайско-белорусская научная конференция`,
@@ -114,8 +114,11 @@ const NewsData: NewsDataProps[] = [
       '✨ Принять участие в викторине и насладиться мастер-классом по написанию иероглифов',
       'Ждем Вас 12 апреля в 220 аудитории Физического факультета БГУ!',
     ],
+    image: '12.png',
     date: '02.04.2025',
   },
 ];
 
-export default NewsData.reverse();
+const NewsData = NewsDataList.reverse();
+
+export default NewsData;
