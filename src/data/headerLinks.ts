@@ -8,10 +8,10 @@ export const headerLinks: HeaderLink[] = [
         subname: 'Об институте',
         subhref: '/about-institute',
       },
-      {
-        subname: 'Мы и Далянь',
-        subhref: '/us-and-dalian',
-      },
+      // {
+      //   subname: 'Мы и Далянь',
+      //   subhref: '/us-and-dalian',
+      // },
       {
         subname: 'РИКК',
         subhref: '/rikk',
