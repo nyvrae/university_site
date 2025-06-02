@@ -1,13 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
-import { historyText, historyDates } from '@/data/us-and-dalian/histrory'
+import { historyText, historyDates } from '@/data/us-and-dalian/history'
 import rock from '../../../../../public/pics/rock.png'
 
-const HistoryDpu = () => {
+const HistoryDut = () => {
     return (
         <section className="history flex-center">
             <div className="history__wrapper wrapper--my">
-                <h2 className="wwtitle--bold">История ДПУ</h2>
+                <h2 className="wwtitle--bold">История ДТУ</h2>
 
                 <div className="mt-[50px] gap-[25px] lg:flex lg:gap-[50px]">
                     <Image className="object-cover lg:min-w-[500px]" src={rock} width={1000} height={1000} alt="" />
@@ -17,7 +17,7 @@ const HistoryDpu = () => {
                                 <p key={index} className="wwtext">{paragraph}</p>
                             ))}
                         </div>
-                        <div className="history-dpu__dates mt-[24px]">
+                        <div className="history-dut__dates mt-[24px]">
                             {historyDates.map(({ year, event }) => (
                                 <article key={year}>
                                     <p className="flex flex-col">
@@ -35,4 +35,4 @@ const HistoryDpu = () => {
     );
 };
 
-export default HistoryDpu;
+export default HistoryDut;

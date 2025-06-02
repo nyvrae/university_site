@@ -22,7 +22,7 @@ const OurHistory = () => {
                                 <p key={index} className="wwtext">{paragraph}</p>
                             ))}
                         </div>
-                        <div className="history-dpu__dates mt-[24px]">
+                        <div className="history-dut__dates mt-[24px]">
                             {historyDates.map(({ year, event }) => (
                                 <article key={year}>
                                     <p className="flex flex-col">

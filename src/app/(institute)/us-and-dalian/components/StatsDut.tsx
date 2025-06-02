@@ -1,7 +1,7 @@
 import React from "react";
 import { statsData } from "@/data/us-and-dalian/statsData";
 
-const StatsDpu = () => {
+const StatsDut = () => {
     return (
         <section className="stats flex-center bg-blue">
             <div className="stats__wrapper wrapper my-[40px] md:my-[75px] lg:my-[100px] grid grid-cols-1 min-[460px]:grid-cols-2 gap-y-[25px] lg:grid-cols-4">
@@ -33,4 +33,4 @@ const StatsDpu = () => {
     );
 };
 
-export default StatsDpu;
+export default StatsDut;

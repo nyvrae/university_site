@@ -14,10 +14,10 @@ export default function VideoPlayer() {
                     onClick={() => setIsPlaying(true)}
                 >
                     <Image
-                        src='/pics/dalian_polytechnic_university.png'
+                        src='/pics/dalian_university_of_technology.png'
                         width={1150}
                         height={650}
-                        alt="Dalian Polytechnic University"
+                        alt="Dalian University of Technology"
                         className="w-full h-[200px] min-[480px]:h-[250px] min-[640px]:h-[300px] min-[768px]:h-[400px] min-[1200px]:h-[500px]"
                     />
                     <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
@@ -29,7 +29,7 @@ export default function VideoPlayer() {
             ) : (
                 <iframe
                     className="w-full h-[200px] min-[480px]:h-[250px] min-[640px]:h-[300px] min-[768px]:h-[400px] min-[1200px]:h-[500px]"
-                    src="https://www.youtube.com/embed/_SdvYRwIURg?autoplay=1"
+                    src="https://www.youtube.com/embed/6Acfzyrc0Jo?autoplay=1"
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

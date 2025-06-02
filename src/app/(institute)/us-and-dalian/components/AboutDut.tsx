@@ -1,26 +1,26 @@
 import React from 'react';
 
-import VideoDpu from './VideoDpu';
+import VideoDut from './VideoDut';
 
-import { aboutDpuContent } from '@/data/us-and-dalian/about';
+import { aboutDutContent } from '@/data/us-and-dalian/about';
 
-const AboutDpu = () => {
+const AboutDut = () => {
     return (
-        <section className="about-dpu flex-center">
-            <div className="about-dpu__wrapper wrapper--mt">
+        <section className="about-dut flex-center">
+            <div className="about-dut__wrapper wrapper--mt">
 
                 <h2 className="wwtitle--bold">
-                    {aboutDpuContent.title}
+                    {aboutDutContent.title}
                 </h2>
 
                 <p className="wwtitle__text my-[15px] lg:w-[60%] 2xl:w-[40%]">
-                    {aboutDpuContent.text}
+                    {aboutDutContent.text}
                 </p>
 
                 <hr />
 
                 <div className="flex-center my-[50px] lg:my-[75px]">
-                    <VideoDpu />
+                    <VideoDut />
                 </div>
 
                 <hr />
@@ -30,4 +30,4 @@ const AboutDpu = () => {
     );
 };
 
-export default AboutDpu;
+export default AboutDut;
