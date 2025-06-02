@@ -5,15 +5,23 @@ import HeaderWrapper from "./main/HeaderWrapper";
 import Advantages from "./main/Advantages";
 import NewsSection from "./main/NewsSection";
 
+import FadeIn from "@/ui/FadeIn";
+
 export default function Page() {
     return (
         <div className="">
             <HeaderWrapper>
                 <Header type="none" />
             </HeaderWrapper>
-            <OurHistory />
-            <Advantages />
-            <NewsSection />
+            <FadeIn>
+                <OurHistory />
+            </FadeIn>
+            <FadeIn>
+                <Advantages />
+            </FadeIn>
+            <FadeIn>
+                <NewsSection />
+            </FadeIn>
             <Footer />
         </div>
     );
