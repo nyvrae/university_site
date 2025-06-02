@@ -7,24 +7,28 @@ import { MenuProps } from '@/interfaces/popupMenuProps';
 
 const PopupMenu: React.FC<MenuProps> = ({ children, submenuItems }) => {
     return (
-        <div className="relative group">
-            <div className="cursor-pointer text-base font-semibold text-white">
+        <div className='relative group'>
+            <div className='cursor-pointer text-base font-semibold text-white group-hover:text-gray-300 transition-colors duration-150 ease-in-out'>
                 {children}
             </div>
 
-            {submenuItems && (
-                <div className="absolute mt-2 bg-white border border-gray-300 rounded shadow-lg z-10 
-                                opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                                transition-all duration-200 min-w-max max-w-[calc(100vw-1rem)]"
-                    style={{ left: 'auto', right: 0 }}>
-                    <ul>
+            {submenuItems && submenuItems.length > 0 && (
+                <div
+                    className='absolute bg-white border border-gray-200/75 rounded-lg shadow-xl z-20
+                               opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:scale-100 scale-95 transform
+                               transition-all duration-400 ease-in-out min-w-max max-w-[calc(100vw-1rem)]'
+                    style={{ left: 'auto', right: 0 }}
+                >
+                    <ul className='divide-y divide-gray-100 '>
                         {submenuItems.map((submenuItem: any, idx: number) => (
                             <li key={idx}>
                                 <Link
                                     href={submenuItem.subhref}
-                                    className="block px-4 py-2 w-full h-full hover:bg-gray-100"
-                                    target={submenuItem.blank ? "_blank" : undefined}
-                                    rel={submenuItem.blank ? "noopener noreferrer" : undefined}>
+                                    className='block px-4 py-2.5 text-sm font-medium rounded-lg text-gray-700 hover:bg-blue hover:text-white
+                                               transition-colors duration-250 ease-in-out whitespace-nowrap'
+                                    target={submenuItem.blank ? '_blank' : undefined}
+                                    rel={submenuItem.blank ? 'noopener noreferrer' : undefined}
+                                >
                                     {submenuItem.subname}
                                 </Link>
                             </li>
