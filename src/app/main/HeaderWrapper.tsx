@@ -16,13 +16,13 @@ const HeaderWrapper = ({ children }: HeaderWrapperProps) => {
                         <span className="flex flex-col lg:text-right text-center uppercase max-[568px]:text-[28px]">
                             <span>Совместный</span>
                             <span>Институт</span>
-                            <span className="lg:hidden">БГУ и ДТУ</span>
+                            <span className="lg:hidden">БГУ и ДПУ</span>
                         </span>
                         <div className='w-[2px] h-[130px] mx-4 bg-white max-lg:hidden'></div>
                         <span className='grid grid-cols-3 grid-rows-3 relative lg:leading-[0.8] max-lg:hidden'>
                             <span className='col-start-1 row-start-1 uppercase'>БГУ</span>
                             <span className='col-start-2 row-start-2 '>и</span>
-                            <span className='col-start-3 row-start-3 uppercase'>ДТУ</span>
+                            <span className='col-start-3 row-start-3 uppercase'>ДПУ</span>
                         </span>
                     </h1>
                 </div>

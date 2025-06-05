@@ -13,7 +13,7 @@ const NewsSection = () => {
                 </h2>
                 <div className="news__content mt-[25px] lg:mt-[50px] flex max-lg:flex-col max-lg:gap-[25px] gap-[40px]">
                     <div className="news__banner">
-                        <Image src={DalianTrip} className="lg:min-w-[500px]" alt="Белорусские студенты на экскурсии, организованной ДТУ" />
+                        <Image src={DalianTrip} className="lg:min-w-[500px]" alt="Белорусские студенты на экскурсии, организованной ДПУ" />
                     </div>
 
                     <div className="news__list flex flex-col justify-center">

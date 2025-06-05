@@ -72,7 +72,7 @@ const BurgerMenu = () => {
                         <p className="flex flex-col text-white items-center gap-2 mt-[50px]">
                             <span className="flex flex-col items-center">
                                 <span className="text-lg">Совместный институт</span>
-                                <span>БГУ и ДТУ</span>
+                                <span>БГУ и ДПУ</span>
                             </span>
                             <span>+375 (17) 209-53-72</span>
                             <span>© 2025</span>

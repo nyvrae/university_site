@@ -7,7 +7,7 @@ const HistoryDut = () => {
     return (
         <section className="history flex-center">
             <div className="history__wrapper wrapper--my">
-                <h2 className="wwtitle--bold">История ДТУ</h2>
+                <h2 className="wwtitle--bold">История ДПУ</h2>
 
                 <div className="mt-[50px] gap-[25px] lg:flex lg:gap-[50px]">
                     <Image className="object-cover lg:min-w-[500px]" src={rock} width={1000} height={1000} alt="" />

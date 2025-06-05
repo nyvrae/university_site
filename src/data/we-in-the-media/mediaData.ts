@@ -21,13 +21,13 @@ export const mediaData = [
   {
     mediaName: 'scienceportal.org.by',
     theme:
-      'БГУ и Даляньский технологический университет обсудили новые векторы сотрудничества',
+      'БГУ и Даляньский политехнический университет обсудили новые векторы сотрудничества',
     link: 'http://scienceportal.org.by/news/BSU-DaljanPolitechUni-NewHor-June2023.html',
   },
   {
     mediaName: 'SB.by',
     theme:
-      'В Минске открыли зимнюю школу для китайских студентов Совместного института БГУ и ДТУ',
+      'В Минске открыли зимнюю школу для китайских студентов Совместного института БГУ и ДПУ',
     link: 'https://news.sb.by/articles/v-minske-otkryli-zimnyuyu-shkolu-dlya-kitayskikh-studentov-sovmestnogo-instituta-bgu-i-dpu.html',
   },
   {
@@ -79,12 +79,12 @@ export const mediaData = [
   {
     mediaName: 'sb.by',
     theme:
-      'Состоялся первый выпуск совместного белорусско-китайского института БГУ-ДТУ',
+      'Состоялся первый выпуск совместного белорусско-китайского института БГУ-ДПУ',
     link: 'https://www.sb.by/articles/sostoyalsya-pervyy-vypusk-sovmestnogo-belorussko-kitayskogo-instituta-bgu-dpu.html',
   },
   {
     mediaName: '1prof.by',
-    theme: `Соглашения о создании совместной магистратуры и аспирантуры БГУ подписал с Даляньским технологическим университетом
+    theme: `Соглашения о создании совместной магистратуры и аспирантуры БГУ подписал с Даляньским политехническим университетом
     из Китая. Об этом сообщила пресс-служба белорусского вуза`,
     link: 'https://1prof.by/news/v-strane/eshhe-odno-partnerstvo-bgu-i-vuz-iz-knr-otkryli-sovmestnuju-magistraturu-i-aspiranturu/',
   },
@@ -103,7 +103,7 @@ export const mediaData = [
   {
     mediaName: 'minsknews.by',
     theme:
-      'Совместная магистратура и аспирантура БГУ и Даляньского технологического университета появится в Китае',
+      'Совместная магистратура и аспирантура БГУ и Даляньского политехнического университета появится в Китае',
     link: 'https://minsknews.by/sovmestnaya-magistratura-i-aspirantura-bgu-i-dalyanskogo-politehnicheskogo-universiteta-poyavitsya-v-kitae/',
   },
   {
@@ -115,7 +115,7 @@ export const mediaData = [
   {
     mediaName: 'scienceportal.org.by',
     theme:
-      'БГУ и Даляньский технологический университет обсудили новые векторы сотрудничества',
+      'БГУ и Даляньский политехнический университет обсудили новые векторы сотрудничества',
     link: 'http://scienceportal.org.by/news/BSU-DaljanPolitechUni-NewHor-June2023.html',
   },
   {
@@ -127,7 +127,7 @@ export const mediaData = [
     mediaName: 'prastora.adu.by',
     theme: `В рамках мероприятий по проведению Года образования 
     Беларуси в Китае на специальности совместного белорусско-китайского института 
-    БГУ и Даляньского технологического университета (ДТУ) зачислены первые абитуриенты.`,
+    БГУ и Даляньского политехнического университета (ДПУ) зачислены первые абитуриенты.`,
     link: 'http://prastora.adu.by/merapryemstvy/22-god-adukatsyi-belarusi-u-kitai/84-v-sovmestnyj-belorussko-kitajskij-institut-bgu-i-dalyanskogo-politekhnicheskogo-universiteta-zachisleny-pervye-abiturienty.html',
   },
 ];
